@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block t %} Welcome to Login{% endblock %}
+{% block body %} 
+
+<form action="/admin" method="POST" class="formi">
+    <p>Admin</p>
+    <input type="text" name="Admin">
+    <p>Password</p>
+    <input type="password" name="Password">
+    <p></p>
+    <input type="submit">
+</form>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+
+{% block t %}  سیستم اطلاعات جغرافیایی ,ارایه خدمات , فروش نقشه های GIS {% endblock %}
+{% block body %} 
+
+ <div><hr>
+<form action="{{context.land8}}" method="POST" class="formi">
+    
+    <p style="text-align: left;font-size: 20px;">Landsat 8 > <a style="color: white;" href="{{context.land7}}">Landsat 7</a> > <a style="color: white;" href="{{context.land9}}">Landsat 9</a> </p>
+    <br/><h2>مشخصات تصویر</h2>
+    <p>Band 1: ON(<input type="radio" name="L8band1" id="L8band1" value="On">)
+    OFF(<input type="radio" name="L8band1" id="L8band1" value="Off">)</p>
+    <p>Band 2: ON(<input type="radio" name="L8band2" id="L8band2" value="On">)
+    OFF(<input type="radio" name="L8band2" id="L8band2" value="Off">)</p> 
+    <p>Band 3: ON(<input type="radio" name="L8band3" id="L8band3" value="On">)
+    OFF(<input type="radio" name="L8band3" id="L8band3" value="Off">)</p> 
+    <p>Band 4: ON(<input type="radio" name="L8band4" id="L8band4" value="On">)
+    OFF(<input type="radio" name="L8band4" id="L8band4" value="Off">)</p>
+    <p>Band 5: ON(<input type="radio" name="L8band5" id="L8band5" value="On">)
+    OFF(<input type="radio" name="L8band5" id="L8band5" value="Off">)</p> 
+    <p>Band 6: ON(<input type="radio" name="L8band6" id="L8band6" value="On">)
+    OFF(<input type="radio" name="L8band6" id="L8band6" value="Off">)</p> 
+    <p>Band 7: ON(<input type="radio" name="L8band7" id="L8band7" value="On">)
+    OFF(<input type="radio" name="L8band7" id="L8band7" value="Off">)</p> 
+    <br/><label for="city">اسم شهر یا منطقه یا مختصات جغرافیایی</label>
+    <input required type="text" name="city" id="city"><br/>
+    <label for="text">توضیحات تکمیلی</label>
+    <textarea required name="text" id="text" cols="30" rows="5" style="text-align: center; font-size: 20px;" placeholder="تعداد تصاویر ، ایمیل ، شماره تماس و هرگونه اطلاعاتی که لازم هست"></textarea>
+    <br/><input type='submit' value="ارسال اطلاعات" style="margin-right: 40px ;padding: 5px;border-radius: 40px;color:darkmagenta;background-color: aquamarine;text-shadow: 1px 1px 1px red;">
+    <div>
+        {% if report %}
+        <h2 style="text-align: right; margin-right: 50px; color: white; background-color: rgb(0, 0, 0);">{{ report }}</h2>
+        {% endif %}
+    </div>
+</form>
+
+ </div>
+{% endblock %}

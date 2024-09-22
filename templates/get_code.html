@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% block t %} سامانه پیگیری {% endblock %}
+{% block body %} 
+
+<form action="" method="POST" class="formi">
+    <h2>کد پیگیری</h2>
+    <input type="text" name="codes">
+    <br> <input type="submit" value="جست و جو">
+</form>
+
+{% if context %}
+<div class="footer-center">
+  <input style="cursor: default;" type="text" value="کد پیگیری  {{context.0.code}}" readonly >  
+  <input style="cursor: default;" type="text" value="باند اول   {{context.0.band1}}" readonly >  
+  <input style="cursor: default;" type="text" value="باند دوم   {{context.0.band2}}" readonly >  
+  <input style="cursor: default;" type="text" value="باند سوم   {{context.0.band3}}" readonly >  
+  <input style="cursor: default;" type="text" value="باند چهارم   {{context.0.band4}}" readonly >  
+  <input style="cursor: default;" type="text" value="باند پنجم   {{context.0.band5}}" readonly >  
+  <input style="cursor: default;" type="text" value="بانند ششم   {{context.0.band6}}" readonly >  
+  <input style="cursor: default;" type="text" value="باند هفتم   {{context.0.band7}}" readonly >  
+  <input style="cursor: default;" type="text" value="منطقه   {{context.0.city}}" readonly >  
+  <input style="cursor: default;" type="text" value="تاریخ درخواست   {{context.0.date}}" readonly >  
+  <input style="cursor: default;" type="text" value="توضیحات   {{context.0.takmili}}" readonly >  
+  <br><br>
+  <label for="link_dl">لینک دانلود</label>
+  <br> <a href="{{context.0.link_dl}}" id="link_dl" >{{context.0.link_dl}}</a><br>
+</div>
+{% endif %}
+{% endblock %}

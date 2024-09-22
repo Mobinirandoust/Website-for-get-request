@@ -1,0 +1,75 @@
+{% extends 'base.html'%}
+
+{% block t %} Admin {% endblock %}
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static' , filename='style.css') }}">
+<style>
+    p,h2{color: white;}
+    a {color:white}
+    * {box-sizing: border-box;}
+</style>
+<h2>
+    خوش آمدید مبین ایران دوست
+</h2>
+<br>
+<h4 style="color: aliceblue;">
+    <p style="text-align: left;font-size: 20px;">Landsat 7</p>
+    <table class="tabel_land7" style="overflow: hidden;">
+    <tr>
+        <th>ID</th><th>Code</th><th>Band 1</th><th>Band 2</th><th>Band 3</th><th>Band 4</th><th>Band 5</th><th>Band 6</th><th>Band 7</th><th>City</th><th>Date</th><th>Delete</th><th>Text Area</th><th>Link DL</th>
+    </tr>
+        {% for me in user7%}
+   <tr>
+        <td>{{me.id}}</td><td>{{me.code}}</td><td>{{me.band1}}</td><td>{{me.band2}}</td><td>{{me.band3}}</td><td>{{me.band4}}</td><td>{{me.band5}}</td><td>{{me.band6}}</td><td>{{me.band7}}</td><td>{{me.city}}</td><td>{{me.date}}</td><td> <a href="/admin/delete7/{{me.id}}" target="blank">{{me.id}}</a> </td><td>{{me.takmili}}</td><th>{{me.link_dl}}</th>
+   </tr>
+        {% endfor %}
+        </table>
+</h4>
+<br>
+<h4 style="color: aliceblue;">
+    <p style="text-align: left;font-size: 20px;">Landsat 8</p>
+    <table class="tabel_land7" style="overflow: hidden;">
+    <tr>
+        <th>ID</th><th>Code</th><th>Band 1</th><th>Band 2</th><th>Band 3</th><th>Band 4</th><th>Band 5</th><th>Band 6</th><th>Band 7</th><th>City</th><th>Date</th><th>Delete</th><th>Text Area</th><th>Link DL</th>
+    </tr>
+        {% for me in user8%}
+   <tr>
+        <td>{{me.id}}</td><td>{{me.code}}</td><td>{{me.band1}}</td><td>{{me.band2}}</td><td>{{me.band3}}</td><td>{{me.band4}}</td><td>{{me.band5}}</td><td>{{me.band6}}</td><td>{{me.band7}}</td><td>{{me.city}}</td><td>{{me.date}}</td><td><a href="/admin/delete8/{{me.id}}" target="blank">{{me.id}}</a></td><td>{{me.takmili}}</td><th>{{me.link_dl}}</th>
+   </tr>
+        {% endfor %}
+        </table>
+</h4>
+<br>
+<h4 style="color: aliceblue;">
+    <p style="text-align: left;font-size: 20px;">Landsat 9</p>
+    <table class="tabel_land7" style="overflow: hidden;">
+    <tr>
+        <th>ID</th><th>Code</th><th>Band 1</th><th>Band 2</th><th>Band 3</th><th>Band 4</th><th>Band 5</th><th>Band 6</th><th>Band 7</th><th>City</th><th>Date</th><th>Delete</th><th>Text Area</th><th>Link DL</th>
+    </tr>
+        {% for me in user9%}
+   <tr>
+        <td>{{me.id}}</td><td>{{me.code}}</td><td>{{me.band1}}</td><td>{{me.band2}}</td><td>{{me.band3}}</td><td>{{me.band4}}</td><td>{{me.band5}}</td><td>{{me.band6}}</td><td>{{me.band7}}</td><td>{{me.city}}</td><td>{{me.date}}</td><td><a href="/admin/delete9/{{me.id}}" target="blank">{{me.id}}</a></td><td>{{me.takmili}}</td><th>{{me.link_dl}}</th>
+   </tr>
+        {% endfor %}
+        </table>
+</h4>
+<hr><br>
+<form action="/getcode/admin/update" method="POST" class="formi">
+    ID(<input type="text" name="code">) <br>
+    Link Download(<input type="text" name="link">) <br>
+    <select name="lib" id="lib">
+        <option value="Landsat7">Landsat7</option>
+        <option value="Landsat8">Landsat8</option>
+        <option value="Landsat9">Landsat9</option>
+    </select>
+    <input type="submit">
+</form>
+
+<button class="buttons" onclick="reup()">Reload</button>
+<script>
+function reup(){
+    location.reload()
+}
+</script>
+
+{% endblock %}
