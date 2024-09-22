@@ -1,0 +1,113 @@
+* { padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;}
+
+.headerbox {text-align: center; font-size: 30px;cursor: default; padding: 2px;
+     width: 100%; height: auto;}
+.headerbox p{display: inline; letter-spacing: 10px;color: rgb(0, 255, 234);}
+
+.headerbox .head1:hover{color: rgb(61, 253, 119);}
+.headerbox .head2:hover{color: rgb(254, 196, 3);}
+.headerbox .head3:hover{color: rgb(153, 77, 230);}
+.headerbox .head4:hover{color: rgb(6, 128, 20);}
+.headerbox .head5:hover{color: rgb(244, 248, 5);}
+.headerbox .head6:hover{color: rgb(87, 58, 231);}
+.headerbox .head7:hover{color: rgb(255, 8, 74);}
+
+.footer-center {
+text-align: left; color: #fff; margin: 50px; font-size: 20px;
+}
+.footer-center a {
+text-decoration: none; color: #fff;
+}
+.footer-center a:hover {
+ color: #ffc107;
+}
+
+body {background-image: url(../static/img/geography.jpg);background-repeat: no-repeat;
+    background-size: cover;text-align: right; margin: 10px; padding: 10px; background-color: rgb(1, 26, 1);}
+
+.formi {text-justify: distribute-all-lines; margin-right: 30px;margin-left: 30px;color: white;}
+.formi label {display: flow-root;}
+.formi input {margin-bottom: 3px;margin-top: 3px;font-family:Verdana, Geneva, Tahoma, sans-serif;font-size: 20px;}
+.formi label {margin-bottom: 3px;margin-top: 3px;font-family:Verdana, Geneva, Tahoma, sans-serif;font-size: 20px;}
+
+.tabel_land7 {border-collapse: collapse;}
+.tabel_land7 th,td {
+    border: 1px solid rgb(255, 255, 255); padding: 2px;border-style: solid;text-align: center;}
+.tabel_land7 tr:nth-child(even){ background-color: rgb(0, 41, 28);}
+.tabel_land7 tr:nth-child(odd){ background-color: rgb(65, 11, 0);}
+
+.index-home h1 {text-decoration: none; text-align: left;}
+.index-home a {text-decoration: none; color: white;}
+.index-home a:hover {color: blue;}
+
+.index-home {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.buttons a:hover {
+  background-color: #333;
+}
+
+.buttons a:first-child {
+  background-color: #007bff;
+}
+
+.buttons a:nth-child(2) {
+  background-color: #28a745;
+}
+
+.buttons a:last-child {
+  background-color: #ffc107;
+}
+.index-home {
+    text-align: center;
+  }
+  
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+.buttons a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: 0.3s;
+  }
+  
+.buttons a:hover {
+    background-color: #333;
+  }
+  
+.buttons a:first-child {
+    background-color: #007bff;
+  }
+  
+.buttons a:nth-child(2) {
+    background-color: #28a745;
+  }
+  
+.buttons a:last-child {
+    background-color: #ffc107;
+  }
+  
